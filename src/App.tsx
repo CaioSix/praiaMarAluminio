@@ -4,17 +4,20 @@ import Header from "./components/Header";
 
 function App() {
   return (
-
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
-      </Routes>
-
-
-    </BrowserRouter>
-  )
+    <div
+      className="min-h-screen w-full bg-cover bg-center"
+      style={{ backgroundImage: "url('/bg.jpg')" }}
+    >
+      <BrowserRouter>
+      <div className="max-w-md mx-auto p-4 h-screen overflow-hidden">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
